@@ -1,0 +1,242 @@
+<app-header></app-header>
+<!--Banner-->
+<section>
+    <mdb-carousel class="carousel  carousel-fade" [animation]="'fade'">
+        <mdb-carousel-item>
+            <img class=" d-block w-100 " style="height: 450px;" src="../../assets/img/gradient1.jpg " alt="First slide ">
+        </mdb-carousel-item>
+    </mdb-carousel>
+</section>
+<div class="container mt-5">
+<!--Carrusel noticias-->
+<mdb-carousel class="mb-5 carousel slide carousel-fade" [animation]="'fade'">
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).webp" alt="First slide">
+        <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Light mask</h3>
+        <p>First text</p>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).webp" alt="Second slide">
+        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Strong mask</h3>
+        <p>Secondary text</p>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view w-100">
+        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).webp" alt="Third slide">
+        <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Slight mask</h3>
+        <p>Third text</p>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+  <h1>Escenarios</h1>
+  <hr><br>
+  <div class="row mb-5">
+   
+        <div class="col-4 mb-3">
+        <!--Card-->
+        <mdb-card cascade="true">
+    
+          <!--Card image-->
+          <div class="view  overlay zoom" mdbWavesEffect>
+            <mdb-card-img src="./assets/img/aula.png"></mdb-card-img>
+            <a>
+              <div class="mask rgba-green-strong">
+                <div class="mask flex-center ">
+                  <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--/Card image-->
+    
+          <mdb-card-body cascade="true" class="" style="background: #86b653; color: white;">
+            <!--Card content-->
+            <h6>Ver libro</h6>
+            <h6>Descargar Libro</h6>
+            <h6><a routerLink="/Proyectos/Aula/1" class="text-white"> Ver proyectos </a></h6>
+          </mdb-card-body>
+          <!--/.Card content-->
+    
+        </mdb-card>
+        <!--/.Card-->
+          </div>
+     
+        <div class="col-4 mb-3">
+        <!--Card-->
+        <mdb-card cascade="true">
+    
+          <!--Card image-->
+          <div class="view overlay zoom" mdbWavesEffect>
+            <mdb-card-img src="./assets/img/escolar.png"></mdb-card-img>
+            <a>
+              <div class="mask flex-center rgba-purple-strong">
+                <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
+              </div>
+            </a>
+          </div>
+          <!--/Card image-->
+    
+          <mdb-card-body cascade="true" style="background: #783a87; color: white;">
+           <!--Card content-->
+           <h6>Ver libro</h6>
+           <h6>Descargar Libro</h6>
+           <h6><a routerLink="/Proyectos/Escolar/1" class="text-white"> Ver proyectos </a></h6>
+    
+          
+          </mdb-card-body>
+          <!--/.Card content-->
+    
+        </mdb-card>
+        <!--/.Card-->
+         </div>
+  
+        <div class="col-4 mb-3">
+      <!--Card-->
+      <mdb-card cascade="true">
+  
+        <!--Card image-->
+        <div class="view  overlay zoom" mdbWavesEffect>
+          <mdb-card-img src="./assets/img/comunitario.png"></mdb-card-img>
+          <a>
+            <div class="mask rgba-orange-strong">
+              <div class="mask flex-center">
+                <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="" style="background: #df812f; color: white;">
+          <!--Card content-->
+          <h6>Ver libro</h6>
+          <h6>Descargar Libro</h6>
+          <h6><a routerLink="/Proyectos/Comunitario/1" class="text-white"> Ver proyectos </a></h6>
+  
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
+        </div>
+
+  </div>
+  <hr>
+  <div class="row mt-5 mb-5">
+   
+        <div class="col-4 mb-3">
+        <!--Card-->
+        <mdb-card cascade="true">
+    
+          <!--Card image-->
+          <div class="view overlay zoom" mdbWavesEffect>
+            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.webp"></mdb-card-img>
+            <a>
+              <div class="mask rgba-red-strong">
+                <div class="mask flex-center">
+                  <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--/Card image-->
+    
+          <mdb-card-body cascade="true" class="" style="background: #e11111; color: white;">
+            <!--Card content-->
+            <h6>Ver libro</h6>
+            <h6>Descargar Libro</h6>
+            <h6><a routerLink="/Proyectos/NS/1" class="text-white"> Ver proyectos </a></h6>
+          
+          </mdb-card-body>
+          <!--/.Card content-->
+    
+        </mdb-card>
+        <!--/.Card-->
+          </div>
+     
+        <div class="col-4 mb-3">
+        <!--Card-->
+        <mdb-card cascade="true">
+    
+          <!--Card image-->
+          <div class="view overlay zoom" mdbWavesEffect>
+            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.webp"></mdb-card-img>
+            <a>
+              <div class="mask rgba-yellow-strong">
+                <div class="mask flex-center">
+                  <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--/Card image-->
+    
+          <mdb-card-body cascade="true" class="" style="background: #fad901; color: white;">
+            <!--Card content-->
+            <h6>Ver libro</h6>
+            <h6>Descargar Libro</h6>
+            <h6><a routerLink="/Proyectos/ML/1" class="text-white"> Ver proyectos </a></h6>
+    
+           
+    
+          </mdb-card-body>
+          <!--/.Card content-->
+    
+        </mdb-card>
+        <!--/.Card-->
+         </div>
+  
+        <div class="col-4 mb-3">
+      <!--Card-->
+      <mdb-card cascade="true">
+  
+        <!--Card image-->
+        <div class="view overlay zoom" mdbWavesEffect>
+          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.webp"></mdb-card-img>
+          <a>
+            <div class="mask rgba-blue-strong">
+              <div class="mask flex-center">
+                <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="" style="background: #1422e4; color: white;">
+          <!--Card content-->
+            <h6>Ver libro</h6>
+            <h6>Descargar Libro</h6>
+            <h6>&nbsp;</h6>
+  
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
+        </div>
+
+    </div>
+    <div class="text-center mb-5">
+        <button mdbBtn type="button" color="unique" mdbWavesEffect  (click)="openModal()">Envianos tus comentarios</button>
+    </div>
+
+
+
+
+
+</div>
+<app-footer></app-footer>
