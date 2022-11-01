@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { SidebarService } from './sidebar.service';
 import { ActivatedRoute } from '@angular/router';
+import { ProyectosComponent } from '../proyectos.component';
+
 
 @Component({
   selector: 'app-sidebar',
@@ -19,7 +21,7 @@ export class SidebarComponent implements OnInit {
   menus = [];
   categoria: string;
   grado: number;
-  constructor(public sidebarservice: SidebarService, private router: ActivatedRoute) {
+  constructor(public sidebarservice: SidebarService, private router: ActivatedRoute, private proyectos: ProyectosComponent) {
     
     //recibe los datos de la ruta de navegacion
     this.router.params.subscribe(
@@ -69,8 +71,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  oupen(id, grado){
-    this.categoria = id;
-    this.grado = grado;
+  public oupen(id, grado): void {
+    this.proyectos.datos(id, grado);
   }
 }

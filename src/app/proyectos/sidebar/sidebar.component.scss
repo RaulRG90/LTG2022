@@ -503,7 +503,7 @@
     // styles with background image
     &.sidebar-bg {
   
-      background-image: url(/assets/img/bg1.jpg);
+      background-image: url(../../../assets/img/barra/bj1.png);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -515,7 +515,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: $img-bg-sidebar-wrapper;
+        //background-color: $img-bg-sidebar-wrapper;
       }
   
       .sidebar-profile,

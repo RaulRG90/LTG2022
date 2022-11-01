@@ -1,26 +1,36 @@
 <app-header></app-header>
+
 <!--Banner-->
 <section>
     <mdb-carousel class="carousel  carousel-fade" [animation]="'fade'">
         <mdb-carousel-item>
-            <img class=" d-block w-100 " style="height: 450px;" src="../../assets/img/gradient1.jpg " alt="First slide ">
+            <img class=" d-block w-100 " src="./assets/img/banner-principal-1920x600.png " alt="First slide ">
         </mdb-carousel-item>
     </mdb-carousel>
 </section>
+
 <div class="container mt-5">
-<!--Carrusel noticias-->
-<mdb-carousel class="mb-5 carousel slide carousel-fade" [animation]="'fade'">
-    <mdb-carousel-item>
-      <div class="view w-100">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).webp" alt="First slide">
-        <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Light mask</h3>
-        <p>First text</p>
-      </div>
-    </mdb-carousel-item>
-    <mdb-carousel-item>
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">PORTAL DE LA NUEVA FAMILIA DE LTG</h2>
+    <h3 class="h3-responsive font-weight-bold text-justify my-5">Bienvenidas y bienvenidos.</h3>
+    <!-- Section description -->
+    <p class="text-justify  mx-auto">La Nueva Escuela Mexicana tiene como finalidad que la niñez y la juventud puedan ejercer plenamente su derecho a la educación, su tarea principal es propiciar que niñas, niños y adolescentes, junto con sus profesoras y profesores, vayan al encuentro
+        de la humanidad, de las otras y los otros, entendidos en su diversidad. </p>
+    <p class="text-justify  mx-auto">La escuela debe formar niñas, niños y adolescentes felices; ciudadanos críticos del mundo que les rodea, emancipados, capaces de tomar decisiones que beneficien sus vidas y las de los demás; la escuela es un lugar en donde se construyen relaciones
+        pedagógicas que tienen repercusión en la vida cotidiana de las y los estudiantes, de sus familias y de las profesoras y los profesores. </p>
+    <p class="text-justify  mx-auto">La Nueva Familia de Libros de Texto Gratuitos recoge estas aspiraciones teniendo a la comunidad como el núcleo integrador de los procesos de enseñanza y aprendizaje, y su desarrollo se concibe como una tarea colectiva en permanente construcción de
+        la mano de maestras y maestros. </p>
+
+    <!--Carrusel noticias-->
+    <mdb-carousel class="mb-5 carousel slide carousel-fade mt-5" [animation]="'fade'">
+        <mdb-carousel-item>
+            <div class="view w-100">
+                <a href="http://gestion.cte.sep.gob.mx/insumos/php/docs/sesion1/Documento%20Informativo%20Familia%20de%20libros%20de%20texto.pdf" target="_blank">
+                    <img class="d-block w-100" src="./assets/img/noticias/noticias-nueva-escuela-mexicana.png" alt="First slide">
+                </a>
+            </div>
+        </mdb-carousel-item>
+        <!--<mdb-carousel-item>
       <div class="view w-100">
         <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).webp" alt="Second slide">
         <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
@@ -39,204 +49,212 @@
         <h3 class="h3-responsive">Slight mask</h3>
         <p>Third text</p>
       </div>
-    </mdb-carousel-item>
-  </mdb-carousel>
-  <h1>Escenarios</h1>
-  <hr><br>
-  <div class="row mb-5">
-   
+    </mdb-carousel-item>-->
+    </mdb-carousel>
+    <h1>Escenarios</h1>
+    <hr><br>
+    <div class="row mb-5">
+
         <div class="col-4 mb-3">
-        <!--Card-->
-        <mdb-card cascade="true">
-    
-          <!--Card image-->
-          <div class="view  overlay zoom" mdbWavesEffect>
-            <mdb-card-img src="./assets/img/aula.png"></mdb-card-img>
-            <a>
-              <div class="mask rgba-green-strong">
-                <div class="mask flex-center ">
-                  <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
+            <!--Card-->
+            <mdb-card cascade="true">
+
+                <!--Card image-->
+                <div class="view  overlay zoom" mdbWavesEffect>
+                    <mdb-card-img src="./assets/img/aula.png"></mdb-card-img>
+                    <a href="./assets/docs/libros/flip/aula1/" target="_blank" (click)="reg( 175 , 1 )">
+                        <div class="mask rgba-green-strong">
+                            <div class="mask flex-center ">
+                                <h2 class="white-text "> <strong>Ver libro </strong>
+                                    <mdb-icon fas icon="book-reader"></mdb-icon>
+                                </h2>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-              </div>
-            </a>
-          </div>
-          <!--/Card image-->
-    
-          <mdb-card-body cascade="true" class="" style="background: #86b653; color: white;">
-            <!--Card content-->
-            <h6>Ver libro</h6>
-            <h6>Descargar Libro</h6>
-            <h6><a routerLink="/Proyectos/Aula/1" class="text-white"> Ver proyectos </a></h6>
-          </mdb-card-body>
-          <!--/.Card content-->
-    
-        </mdb-card>
-        <!--/.Card-->
-          </div>
-     
-        <div class="col-4 mb-3">
-        <!--Card-->
-        <mdb-card cascade="true">
-    
-          <!--Card image-->
-          <div class="view overlay zoom" mdbWavesEffect>
-            <mdb-card-img src="./assets/img/escolar.png"></mdb-card-img>
-            <a>
-              <div class="mask flex-center rgba-purple-strong">
-                <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
-              </div>
-            </a>
-          </div>
-          <!--/Card image-->
-    
-          <mdb-card-body cascade="true" style="background: #783a87; color: white;">
-           <!--Card content-->
-           <h6>Ver libro</h6>
-           <h6>Descargar Libro</h6>
-           <h6><a routerLink="/Proyectos/Escolar/1" class="text-white"> Ver proyectos </a></h6>
-    
-          
-          </mdb-card-body>
-          <!--/.Card content-->
-    
-        </mdb-card>
-        <!--/.Card-->
-         </div>
-  
-        <div class="col-4 mb-3">
-      <!--Card-->
-      <mdb-card cascade="true">
-  
-        <!--Card image-->
-        <div class="view  overlay zoom" mdbWavesEffect>
-          <mdb-card-img src="./assets/img/comunitario.png"></mdb-card-img>
-          <a>
-            <div class="mask rgba-orange-strong">
-              <div class="mask flex-center">
-                <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
-              </div>
-            </div>
-          </a>
-        </div>
-        <!--/Card image-->
-  
-        <mdb-card-body cascade="true" class="" style="background: #df812f; color: white;">
-          <!--Card content-->
-          <h6>Ver libro</h6>
-          <h6>Descargar Libro</h6>
-          <h6><a routerLink="/Proyectos/Comunitario/1" class="text-white"> Ver proyectos </a></h6>
-  
-        </mdb-card-body>
-        <!--/.Card content-->
-  
-      </mdb-card>
-      <!--/.Card-->
+                <!--/Card image-->
+
+                <mdb-card-body cascade="true" class="" style="background: #86b653; color: white;">
+                    <!--Card content-->
+                    <h6><a href="./assets/docs/libros/flip/aula1/" target="_blank" class="text-white" (click)="reg( 175 , 1 )">Ver libro</a></h6>
+                    <h6><a href="./assets/docs/libros/pdf/aula1.pdf" target="_blank" class="text-white" (click)="reg( 175 , 1 )">Descargar Libro</a></h6>
+                    <h6><a routerLink="/Proyectos/Aula/1" class="text-white"> Ver proyectos </a></h6>
+                </mdb-card-body>
+                <!--/.Card content-->
+
+            </mdb-card>
+            <!--/.Card-->
         </div>
 
-  </div>
-  <hr>
-  <div class="row mt-5 mb-5">
-   
         <div class="col-4 mb-3">
-        <!--Card-->
-        <mdb-card cascade="true">
-    
-          <!--Card image-->
-          <div class="view overlay zoom" mdbWavesEffect>
-            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.webp"></mdb-card-img>
-            <a>
-              <div class="mask rgba-red-strong">
-                <div class="mask flex-center">
-                  <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
+            <!--Card-->
+            <mdb-card cascade="true">
+
+                <!--Card image-->
+                <div class="view overlay zoom" mdbWavesEffect>
+                    <mdb-card-img src="./assets/img/escolar.png"></mdb-card-img>
+                    <a href="./assets/docs/libros/flip/1-Escolar/" target="_blank" (click)="reg( 174 , 1 )">
+                        <div class="mask flex-center rgba-purple-strong">
+                            <h2 class="white-text "> <strong>Ver libro </strong>
+                                <mdb-icon fas icon="book-reader"></mdb-icon>
+                            </h2>
+                        </div>
+                    </a>
                 </div>
-              </div>
-            </a>
-          </div>
-          <!--/Card image-->
-    
-          <mdb-card-body cascade="true" class="" style="background: #e11111; color: white;">
-            <!--Card content-->
-            <h6>Ver libro</h6>
-            <h6>Descargar Libro</h6>
-            <h6><a routerLink="/Proyectos/NS/1" class="text-white"> Ver proyectos </a></h6>
-          
-          </mdb-card-body>
-          <!--/.Card content-->
-    
-        </mdb-card>
-        <!--/.Card-->
-          </div>
-     
-        <div class="col-4 mb-3">
-        <!--Card-->
-        <mdb-card cascade="true">
-    
-          <!--Card image-->
-          <div class="view overlay zoom" mdbWavesEffect>
-            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.webp"></mdb-card-img>
-            <a>
-              <div class="mask rgba-yellow-strong">
-                <div class="mask flex-center">
-                  <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!--/Card image-->
-    
-          <mdb-card-body cascade="true" class="" style="background: #fad901; color: white;">
-            <!--Card content-->
-            <h6>Ver libro</h6>
-            <h6>Descargar Libro</h6>
-            <h6><a routerLink="/Proyectos/ML/1" class="text-white"> Ver proyectos </a></h6>
-    
-           
-    
-          </mdb-card-body>
-          <!--/.Card content-->
-    
-        </mdb-card>
-        <!--/.Card-->
-         </div>
-  
-        <div class="col-4 mb-3">
-      <!--Card-->
-      <mdb-card cascade="true">
-  
-        <!--Card image-->
-        <div class="view overlay zoom" mdbWavesEffect>
-          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.webp"></mdb-card-img>
-          <a>
-            <div class="mask rgba-blue-strong">
-              <div class="mask flex-center">
-                <h2 class="white-text "> <strong>Ver libro </strong> <mdb-icon fas icon="book-reader"></mdb-icon> </h2>
-              </div>
-            </div>
-          </a>
+                <!--/Card image-->
+
+                <mdb-card-body cascade="true" style="background: #783a87; color: white;">
+                    <!--Card content-->
+                    <h6><a href="./assets/docs/libros/flip/1-Escolar/" target="_blank" class="text-white" (click)="reg( 174 , 1 )">Ver libro</a></h6>
+                    <h6><a href="./assets/docs/libros/pdf/1-Escolar.pdf" target="_blank" class="text-white" (click)="reg( 174 , 2 )">Descargar Libro</a></h6>
+                    <h6><a routerLink="/Proyectos/Escolar/1" class="text-white"> Ver proyectos </a></h6>
+
+
+                </mdb-card-body>
+                <!--/.Card content-->
+
+            </mdb-card>
+            <!--/.Card-->
         </div>
-        <!--/Card image-->
-  
-        <mdb-card-body cascade="true" class="" style="background: #1422e4; color: white;">
-          <!--Card content-->
-            <h6>Ver libro</h6>
-            <h6>Descargar Libro</h6>
-            <h6>&nbsp;</h6>
-  
-        </mdb-card-body>
-        <!--/.Card content-->
-  
-      </mdb-card>
-      <!--/.Card-->
+
+        <div class="col-4 mb-3">
+            <!--Card-->
+            <mdb-card cascade="true">
+
+                <!--Card image-->
+                <div class="view  overlay zoom" mdbWavesEffect>
+                    <mdb-card-img src="./assets/img/comunitario.png"></mdb-card-img>
+                    <a href="./assets/docs/libros/flip/COMUNITARIO/" target="_blank" (click)="reg( 176 , 1 )">
+                        <div class="mask rgba-orange-strong">
+                            <div class="mask flex-center">
+                                <h2 class="white-text "> <strong>Ver libro </strong>
+                                    <mdb-icon fas icon="book-reader"></mdb-icon>
+                                </h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--/Card image-->
+
+                <mdb-card-body cascade="true" class="" style="background: #df812f; color: white;">
+                    <!--Card content-->
+                    <h6><a href="./assets/docs/libros/flip/COMUNITARIO/" target="_blank" class="text-white" (click)="reg( 176 , 1 )">Ver libro</a></h6>
+                    <h6><a href="./assets/docs/libros/pdf/COMUNITARIO.pdf" target="_blank" class="text-white" (click)="reg( 176 , 2 )">Descargar Libro</a></h6>
+                    <h6><a routerLink="/Proyectos/Comunitario/1" class="text-white"> Ver proyectos </a></h6>
+
+                </mdb-card-body>
+                <!--/.Card content-->
+
+            </mdb-card>
+            <!--/.Card-->
+        </div>
+
+    </div>
+    <hr>
+    <div class="row mt-5 mb-5">
+
+        <div class="col-4 mb-3">
+            <!--Card-->
+            <mdb-card cascade="true">
+
+                <!--Card image-->
+                <div class="view overlay zoom" mdbWavesEffect>
+                    <mdb-card-img src="./assets/img/saberes.png"></mdb-card-img>
+                    <a href="./assets/docs/libros/flip/1_NUESTROS_SABERES/" target="_blank" (click)="reg( 94 , 1 )">
+                        <div class="mask rgba-red-strong">
+                            <div class="mask flex-center">
+                                <h2 class="white-text "> <strong>Ver libro </strong>
+                                    <mdb-icon fas icon="book-reader"></mdb-icon>
+                                </h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--/Card image-->
+
+                <mdb-card-body cascade="true" class="" style="background: #D34564; color: white;">
+                    <!--Card content-->
+                    <h6><a href="./assets/docs/libros/flip/1_NUESTROS_SABERES" target="_blank" class="text-white" (click)="reg( 94 , 1 )">Ver libro</a></h6>
+                    <h6><a href="./assets/docs/libros/pdf/1_NUESTROS_SABERES.pdf" target="_blank" class="text-white" (click)="reg( 94 , 2 )">Descargar Libro</a></h6>
+                    <h6><a routerLink="/Proyectos/NS/1" class="text-white"> Ver proyectos </a></h6>
+
+                </mdb-card-body>
+                <!--/.Card content-->
+
+            </mdb-card>
+            <!--/.Card-->
+        </div>
+
+        <div class="col-4 mb-3">
+            <!--Card-->
+            <mdb-card cascade="true">
+
+                <!--Card image-->
+                <div class="view overlay zoom" mdbWavesEffect>
+                    <mdb-card-img src="./assets/img/lenguajes.png"></mdb-card-img>
+                    <a href="./assets/docs/libros/flip/LPA-ML-1/" target="_blank" (click)="reg( 93 , 1 )">
+                        <div class="mask rgba-blue-strong">
+                            <div class="mask flex-center">
+                                <h2 class="white-text "> <strong>Ver libro </strong>
+                                    <mdb-icon fas icon="book-reader"></mdb-icon>
+                                </h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--/Card image-->
+
+                <mdb-card-body cascade="true" class="" style="background: #4873B4; color: white;">
+                    <!--Card content-->
+                    <h6><a href="./assets/docs/libros/flip/LPA-ML-1/" target="_blank" class="text-white" (click)="reg( 93 , 1 )">Ver libro</a></h6>
+                    <h6><a href="./assets/docs/libros/pdf/LPA-ML-1.pdf" target="_blank" class="text-white" (click)="reg( 93 , 2 )">Descargar Libro</a></h6>
+                    <h6><a routerLink="/Proyectos/ML/1" class="text-white"> Ver proyectos </a></h6>
+
+
+
+                </mdb-card-body>
+                <!--/.Card content-->
+
+            </mdb-card>
+            <!--/.Card-->
+        </div>
+
+        <div class="col-4 mb-3">
+            <!--Card-->
+            <mdb-card cascade="true">
+
+                <!--Card image-->
+                <div class="view overlay zoom" mdbWavesEffect>
+                    <mdb-card-img src="./assets/img/docente.png"></mdb-card-img>
+                    <a href="./assets/docs/libros/flip/1_DOCENTES_fase_3/" target="_blank" (click)="reg( 150 , 1 )">
+                        <div class="mask rgba-red-strong">
+                            <div class="mask flex-center">
+                                <h2 class="white-text "> <strong>Ver libro </strong>
+                                    <mdb-icon fas icon="book-reader"></mdb-icon>
+                                </h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--/Card image-->
+
+                <mdb-card-body cascade="true" class="" style="background: #B82741; color: white;">
+                    <!--Card content-->
+                    <h6><a href="./assets/docs/libros/flip/1_DOCENTES_fase_3/" target="_blank" class="text-white" (click)="reg( 150 , 1 )">Ver libro</a></h6>
+                    <h6><a href="./assets/docs/libros/pdf/1_DOCENTES_fase_3.pdf" target="_blank" class="text-white" (click)="reg( 150 , 2 )">Descargar Libro</a></h6>
+                    <h6>&nbsp;</h6>
+
+                </mdb-card-body>
+                <!--/.Card content-->
+
+            </mdb-card>
+            <!--/.Card-->
         </div>
 
     </div>
     <div class="text-center mb-5">
-        <button mdbBtn type="button" color="unique" mdbWavesEffect  (click)="openModal()">Envianos tus comentarios</button>
+        <button mdbBtn type="button" color="unique" mdbWavesEffect (click)="openModal()">Envianos tus comentarios</button>
     </div>
-
-
-
-
 
 </div>
 <app-footer></app-footer>

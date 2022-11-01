@@ -7,26 +7,55 @@
                     <div class=" col-xs-6 col-md-6">
                         <mdb-icon fas icon="bars" size="2x" style="color: #465056;" (click)="toggleSidebar()" class="mr-3"></mdb-icon>
 
-                        <a (click)="oupen('/')">
-                            <p class="d-inline-block p-3 font-weight-bold  text-default " style="font-size: 20px;"> <mdb-icon fas icon="home"></mdb-icon> Inicio</p>
+                        <a routerLink="/">
+                            <p class="d-inline-block p-3 font-weight-bold  text-default " style="font-size: 20px;">
+                                <mdb-icon fas icon="home"></mdb-icon> Inicio</p>
                         </a> /
-                        <p class="d-inline-block p-3 " style="font-size: 20px;color: #66615b;font-weight: 400;">{{categoria}}</p>
+                        <p class="d-inline-block p-3 " style="font-size: 20px;color: #930b9d;font-weight: 400;">{{categoria}}</p>
                         /
-                        <p class="d-inline-block p-3 " style="font-size: 20px;color: #66615b;font-weight: 400;">Grado {{grado}}</p>
-                        
+                        <p class="d-inline-block p-3 " style="font-size: 20px;color: #66615b;font-weight: 400;">Grado {{gradoid}}</p>
+
                     </div>
-                    
+
                 </div>
             </div>
-            <div class="row">
-                {{ categoria }}
-                {{ grado }}
+           
 
-            </div>
+            <div class="container mt-2">
+                <table mdbTable #tableEl="mdbTable" class="z-depth-1">
+                  <thead>
+                  <tr>
+                    <th *ngFor="let head of headElements; let i = index" scope="col">{{ head }}
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let el of content; let i = index">
+                    <th *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"
+                        scope="row">{{ i + 1 }}</th>
+                    <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.titulo_libro}}</td>
+                    <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.id_campo}}</td>
+                    <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.num_pag}}</td>
+                    <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">
+                        <a href="./assets/docs/proyectos/flip/{{el.archivo}}/" target="_blank" (click)="reg(el.id_contenido, 1 )">Ver</a>
+                    </td>
+                    <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">
+                        <a href="./assets/docs/proyectos/pdf/{{el.archivo}}.pdf" target="_blank" (click)="reg(el.id_contenido, 2 )">Descarga PDF</a>
+                    </td>
+                  </tr>
+                  </tbody>
+                  <tfoot class="grey lighten-5 w-100">
+                  <tr>
+                    <td colspan="6">
+                      <mdb-table-pagination [tableEl]="tableEl" [searchDataSource]="content"></mdb-table-pagination>
+                    </td>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
         </div>
         <div class="overlay" (click)="toggleSidebar()" [ngClass]="{'show' : !getSideBarState()}"></div>
 
     </main>
 
 </div>
-

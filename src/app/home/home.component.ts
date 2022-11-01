@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';
+import { RegistroService } from '../services/registro.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,7 +10,8 @@ import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';
 })
 export class HomeComponent implements OnInit {
   modalRef: MDBModalRef | null = null;
-  constructor(private modalService: MDBModalService) { }
+  constructor(private modalService: MDBModalService,
+    public registro: RegistroService) { }
 
   ngOnInit(): void {
   }
@@ -33,4 +36,10 @@ export class HomeComponent implements OnInit {
   openModal() {
     this.modalRef = this.modalService.show(ModalComponent, this.modalOptions)
   }
+
+  reg( id_contenido, tipo){
+    console.log(id_contenido, tipo);
+    this.registro.dat(id_contenido, tipo).subscribe();
+  }
+
 }

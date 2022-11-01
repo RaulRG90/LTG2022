@@ -99,7 +99,7 @@ export class SidebarService {
         this.menus[i].active = false;
       }
     });
-    console.log(this.menus);
+    //console.log(this.menus);
     return this.menus;
   }
 
@@ -111,3 +111,4 @@ export class SidebarService {
     this._hasBackgroundImage = hasBackgroundImage;
   }
 }
+
